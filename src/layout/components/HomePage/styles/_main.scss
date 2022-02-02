@@ -1,0 +1,39 @@
+.home-page-l1{
+	.page-body{
+		position: relative;		
+		background-color: white;
+		margin-top: $top-promotion-height - $page-top-gap;
+		.page-content{
+			.app-promotion{
+				border-top: 0.5px solid $color-MediumLightGray;
+			}
+			.gift-card-promotion{
+				border-top: 0.5px solid $color-MediumLightGray;	
+			}
+			.extra-order-promotion{
+				border-top: 0.5px solid $color-MediumLightGray;	
+			}
+			.horizontal-list{
+				margin-top: 30px;
+				.list-container{
+					transform: translateX( dir-negate(-$horizontal-list-item-side-padding) );
+				}
+				.card-container{
+					padding: 0 $horizontal-list-item-side-padding;
+					height: 100%;
+				}
+			}		
+		}
+	}
+	&.mobile{
+		.page-body{
+			margin-top: $top-promotion-height;
+		}
+		@include bottom-filler-padding();
+	}
+	.plcaholder{
+		height: 0;
+	}
+
+	
+}

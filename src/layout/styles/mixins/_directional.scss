@@ -1,0 +1,180 @@
+@mixin dir-padding($top, $right, $bottom, $left, $important: false){
+	@if(not $right){
+		$right: $top;
+	}
+	@if(not $bottom){
+		$bottom: $top;
+	}
+	@if(not $left){
+		$left: $right;
+	}
+	@if($GLOBALS_RTL){
+		$tmp: $right;
+		$right: $left;
+		$left: $tmp;
+	}
+
+	@if($important){
+		$important: '!important';
+	} @else {
+		$important: '';
+	}
+
+	padding: $top $right $bottom $left #{$important};
+}
+
+@mixin dir-margin($top, $right, $bottom, $left, $important: false){
+	@if(not $right){
+		$right: $top;
+	}
+	@if(not $bottom){
+		$bottom: $top;
+	}
+	@if(not $left){
+		$left: $right;
+	}
+	@if($GLOBALS_RTL){
+		$tmp: $right;
+		$right: $left;
+		$left: $tmp;
+	}
+
+	@if($important){
+		$important: '!important';
+	} @else {
+		$important: '';
+	}
+
+	margin: $top $right $bottom $left #{$important};
+}
+
+@mixin dir-border-radius($top, $right, $bottom, $left, $important: false){
+	@if(not $right){
+		$right: $top;
+	}
+	@if(not $bottom){
+		$bottom: $top;
+	}
+	@if(not $left){
+		$left: $right;
+	}
+	@if($GLOBALS_RTL){
+		$tmp: $right;
+		$right: $left;
+		$left: $tmp;
+	}
+
+	@if($important){
+		$important: '!important';
+	} @else {
+		$important: '';
+	}
+
+	border-radius: $top $right $bottom $left #{$important};
+}
+
+
+@mixin dir-padding-left($value, $important: false){
+	@if($important){
+		$important: '!important';
+	} @else {
+		$important: '';
+	}
+
+	@if($GLOBALS_RTL){
+		padding-right: $value #{$important};
+	} @else {
+		padding-left: $value #{$important};
+	}
+}
+
+@mixin dir-padding-right($value, $important: false){
+	@if($important){
+		$important: '!important';
+	} @else {
+		$important: '';
+	}
+
+	@if($GLOBALS_RTL){
+		padding-left: $value #{$important};
+	} @else {
+		padding-right: $value #{$important};
+	}
+}
+
+
+@mixin dir-margin-left($value, $important: false){
+	@if($important){
+		$important: '!important';
+	} @else {
+		$important: '';
+	}
+
+	@if($GLOBALS_RTL){
+		margin-right: $value #{$important};
+	} @else {
+		margin-left: $value #{$important};
+	}
+}
+
+@mixin dir-margin-right($value, $important: false){
+	@if($important){
+		$important: '!important';
+	} @else {
+		$important: '';
+	}
+
+	@if($GLOBALS_RTL){
+		margin-left: $value #{$important};
+	} @else {
+		margin-right: $value #{$important};
+	}
+}
+
+@mixin dir-right($value, $important: false){
+	@if($important){
+		$important: '!important';
+	} @else {
+		$important: '';
+	}
+
+	@if($GLOBALS_RTL){
+		left: $value #{$important};
+	} @else {
+		right: $value #{$important};
+	}
+}
+
+@mixin dir-left($value, $important: false){
+	@if($important){
+		$important: '!important';
+	} @else {
+		$important: '';
+	}
+
+	@if($GLOBALS_RTL){
+		right: $value #{$important};
+	} @else {
+		left: $value #{$important};
+	}
+}
+
+@mixin dir-text-align($value, $important: false){
+	@if($important){
+		$important: '!important';
+	} @else {
+		$important: '';
+	}
+
+	@if($GLOBALS_RTL){
+		@if($value == left){
+			$value: right;
+		} @else {
+			$value: left;
+		}
+	}
+
+	text-align: $value #{$important};
+}
+
+

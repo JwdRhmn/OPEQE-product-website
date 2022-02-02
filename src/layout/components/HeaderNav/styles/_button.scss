@@ -1,0 +1,16 @@
+.button-l2{
+	margin: 0 5px;
+	font-weight: bold;		
+	display: none;
+	@include media-breakpoint-up(sm){
+		display: inline-block;
+	}
+	.button{
+		padding: 6px 15px;
+		width: auto;
+		height: auto;
+	}
+	&.fixed{
+		display: inline-block;
+	}
+}

@@ -1,0 +1,69 @@
+.pricing-l2{
+	margin-top: 10px;
+	.price-container{
+		.price{
+			td{
+				&:first-child{
+					font-size: 14px;
+					text-align: $dir-right;
+				}
+				&:last-child{
+					font-size: 18px;
+					color: $color-Red;
+					font-weight: bold;	
+					padding: 0 5px;				
+				}	
+			}
+			&.small{
+				td:last-child{
+					font-size: 14px;
+				}
+			}
+			&.lined{
+				td:last-child{
+					text-decoration: line-through;
+				}
+			}
+			&.green{
+				td:last-child{
+					color: $color-Green;
+				}
+			}
+		}
+	}
+	.special{
+		margin-top: 10px;
+		.checkbox{
+			padding: 0;
+			background-color: transparent;
+		}
+		.description{
+			color: $color-Complementary;
+			font-size: 14px;
+			@include dir-margin-left(5px);
+			.show-details{
+				font-size: 16px;
+				cursor: pointer;
+				text-decoration: underline;
+				color: $color-MediumGray;
+			}
+		}
+	}
+	.subscribe{
+		font-size: 14px;
+		color: $color-MediumGray;
+	}
+	.stock{
+		display: inline-block;
+		margin-top: 15px;
+		color: $color-Green;
+		font-weight: bold;
+		font-size: 20px;
+		&.red{
+			padding: 4px 6px;
+			border-radius: 10px;
+			background-color: $color-Red;
+			color: white;
+		}
+	}
+}

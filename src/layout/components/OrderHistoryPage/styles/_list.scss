@@ -1,0 +1,6 @@
+.list-l2{
+	width: 100%;
+	&.mobile{
+		@include bottom-filler-padding();
+	}
+}

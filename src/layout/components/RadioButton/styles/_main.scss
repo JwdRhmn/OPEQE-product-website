@@ -1,0 +1,8 @@
+.radio-button-l1{		
+	&.disabled{
+		color: $color-DimGray  !important;
+		&:hover{
+			background-color: rgba($color-DimGray, 0.08)  !important;
+		}
+	}
+}

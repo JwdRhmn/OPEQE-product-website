@@ -1,0 +1,7 @@
+@function dir-negate($value){
+	@if($GLOBALS_RTL){
+		@return -$value;
+	} @else {
+		@return $value;
+	}
+}

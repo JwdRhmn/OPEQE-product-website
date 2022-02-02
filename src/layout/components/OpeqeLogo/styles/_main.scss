@@ -1,0 +1,14 @@
+.opeqe-logo-l1{
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	vertical-align: baseline;	
+	.text{
+		width: 100%;
+		position: absolute;
+		top: 0;
+		@include dir-left(50%);
+		transform: translate(dir-negate(-50%), -50%);
+		color: $color-MediumGray;
+	}
+}

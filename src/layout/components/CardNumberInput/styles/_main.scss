@@ -1,0 +1,19 @@
+.card-number-input-l1{
+	.input-container{
+		@include MUI-custom-input();
+		.adornment{
+			color: $color-DimGray;
+			img{
+				width: 24px	;
+			}
+		}
+	}
+	.error{
+		transition: opacity 0.5s;
+		opacity: 0;
+		color: $color-Main;
+		&.show{
+			opacity: 1;
+		}
+	}
+}

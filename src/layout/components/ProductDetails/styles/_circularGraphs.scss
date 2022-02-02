@@ -1,0 +1,12 @@
+.circular-graphs-l2{
+	.graph{
+		display: inline-block;
+		text-align: center;
+		@include dir-margin-right(25px);
+		.graph-label{
+			display: inline-block;
+			color: $color-DimGray;
+			margin-bottom: 10px;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+.circular-progress-bar-l1{	
+	display: inline-block;
+	text-align: center;
+	padding: 5px;
+	.bar-title{
+		font-size: 14px;
+		color: $color-DimGray;
+	}
+	.bar-body{
+		margin-top: 5px;
+		display: inline-block;
+		position: relative;
+		.progress{
+			height: 30px;
+			border-radius: 30px;
+		}
+		.progress-label{
+			position: absolute;
+			top: 50%;
+			@include dir-left(50%);
+			transform: translate(dir-negate(-50%), -50%);
+			font-size: 14px;
+			color: $color-MediumGray;
+		}
+	}
+	&.upside-down{
+		.bar-body{
+			.progress{
+				transform: rotate(135deg) !important;
+			}
+		}
+	}
+}

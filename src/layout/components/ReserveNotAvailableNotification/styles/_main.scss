@@ -1,0 +1,13 @@
+.reserve-not-available-notification-l1{
+	.text{
+		margin: 5px 0;
+	}
+	.date-time{
+		font-weight: bold;
+	}
+	.button-container{
+		display: inline-flex;
+        flex-grow: 1;
+        margin: 0 2px;
+	}
+}

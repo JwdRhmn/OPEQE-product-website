@@ -1,0 +1,11 @@
+.text-field-l1{
+	.input-container {
+		@include MUI-custom-input();
+		font-size: inherit;
+	}
+	&.no-underline {
+		.input-container {
+			@include MUI-custom-input(true);
+		}
+	}
+}

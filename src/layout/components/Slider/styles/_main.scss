@@ -1,0 +1,72 @@
+.slider-l1{
+	$fadeDuration: 1000ms;
+	$swipeDuration: 1000ms;
+
+	position: relative;
+	.transition-container{
+		> *{
+			position: absolute;
+			top: 0;
+			@include dir-left(0);
+			width: 100%;
+			transition: opacity $fadeDuration, transform $swipeDuration;		    			
+			@include forceGPU("transform, opacity");
+			&.animation-enter {	    	
+		    	opacity: 0;
+				&.animation-enter-active {
+				    opacity: 1;
+				}
+			}
+
+			&.animation-exit {    
+			    opacity: 1;
+				&.animation-exit-active {
+				    opacity: 0;		    			
+				}
+			}
+		}
+		&.exit-left{
+			> *{
+				&.animation-enter {	 
+			    	transform: translateX(100%);
+					&.animation-enter-active {
+						transform: translateX(0);	    			
+					}
+				}
+
+				&.animation-exit {  
+				    transform: translateX(0);
+					&.animation-exit-active {
+						transform: translateX(-100%);    			
+					}
+				}
+			}
+		}
+		&.exit-right{
+			> *{
+				&.animation-enter {	 
+			    	transform: translateX(-100%);
+					&.animation-enter-active {
+						transform: translateX(0);	    			
+					}
+				}
+
+				&.animation-exit {  
+				    transform: translateX(0);
+					&.animation-exit-active {
+						transform: translateX(100%);    			
+					}
+				}
+			}
+		}
+	}
+	.slider-buttons{
+		position: absolute;
+		bottom: 4px;
+		@include dir-left(0);
+		display: block;
+		text-align: center;
+		width: 100%;
+		z-index: $zi-medium;
+	}
+}

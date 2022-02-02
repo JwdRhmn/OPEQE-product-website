@@ -1,0 +1,60 @@
+.mobile-app-promotion-l1{
+	@import "./form";
+	padding: 30px 0;
+	@include media-breakpoint-up(sm){
+		flex-wrap: nowrap !important;
+	}
+	.body{
+		display: inline-block;
+		text-align: center;
+		.logo{
+			margin: 0 0 10px 0;
+		}
+		.small{
+			font-size: 16px;
+		}
+		.large{
+			font-size: 20px;
+		}
+		.bold{
+			font-weight: bold;
+		}
+		.upper{
+			text-transform: uppercase;
+		}
+	}
+	.full-image{
+		width: 80%;
+		padding: 20px 0;
+		box-sizing: border-box;
+		display: block;
+		@include media-breakpoint-up(sm){
+			display: none;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.single-image{
+		width: 200px;
+		padding: 0 20px;
+		box-sizing: border-box;
+		display: none;
+		@include media-breakpoint-up(sm){
+			display: inline-block;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&.before{
+			@include dir-margin-right(4%);
+		}
+		&.after{
+			@include dir-margin-left(4%);
+		}
+	}
+}

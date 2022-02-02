@@ -1,0 +1,31 @@
+.bottom-nav-l1{
+	height: $bottom-nav-height;	
+	position: fixed;
+	bottom: 0;
+	@include dir-left(0);
+	width: 100%;
+	z-index: $zi-max;
+	background-color: white;
+	border-top: 0.1px solid $color-MediumLightGray;	
+	@media all and (display-mode: standalone) {
+		height: $bottom-nav-standalone-height;
+	}
+	.buttons{
+		@import "./button";
+		flex-wrap: nowrap !important;		
+		.button {
+			padding: 5px 0 0 0;
+			line-height: 1;
+		}
+	}
+	.opeqe{
+		height: 100%;
+		font-size: 10px;
+		color: $color-MediumGray;
+		background-color: $color-UltraLightGray;
+		text-align: center;
+		width:100%;
+		padding: 5px 0;
+	}
+
+}

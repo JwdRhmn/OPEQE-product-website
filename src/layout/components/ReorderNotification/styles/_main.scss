@@ -1,0 +1,29 @@
+.reorder-notification-l1{
+	.img-container{
+		width:100%;
+		height:100px;
+		margin-bottom: 20px;
+		img{
+			border-radius: 20px 20px 0 0 ;
+			width: 100%;
+			height:100%;
+			object-fit: cover;
+		}
+	}
+	.body{
+		> *{
+			display: block;
+		}
+		.title{
+			color: $color-Main;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.sub-title{
+			color: $color-DimGray;
+		}
+		.text{
+			color: $color-MediumGray;
+		}
+	}
+}

@@ -1,0 +1,81 @@
+.date-picker-l1{
+	display: inline-block;
+	white-space: normal;
+	max-width: 310px;
+	> *{
+		> *{
+			> *:nth-child(2){
+				justify-content: flex-start;
+				height: 330px;
+			}
+		}
+	}
+	.header{
+		padding: 0 10px;
+		height: 110px;
+		flex-wrap: nowrap;
+		.preview{			
+			text-align: center;
+			width: 90px;
+			flex-shrink: 0;
+			> *{
+				display: inline-block;
+			}
+			.pre{
+				font-size: 14px;
+				color: $color-MediumGray;
+			}
+			.main{
+				font-size: 60px;
+				font-weight: bold;
+				color: $color-Main;
+			}
+			.sub{
+				font-size: 14px;
+				color: $color-MediumGray;				
+			}			
+		}
+		.details{
+			overflow: hidden;
+			text-align: $dir-left;
+			width: 100%;
+			padding: 0 5px;
+			> *{
+				display: block;
+			}			
+			.main{
+				font-size: 18px;
+				color: $color-Complementary;
+				text-align: justify;
+			}
+			.description{
+				font-size: 14px;
+				color: $color-MediumGray;
+				text-align: justify;
+			}
+		}
+	}
+	.custom-day{
+		display: inline-flex;
+		min-width: 0;
+		width: 36px;
+		height: 36px;
+		line-height: 1;
+		margin: 2px;
+		border-radius: 30px;
+		&.marked{
+			background-color: $color-Secondary;				
+			color: white;
+		}
+		&.selected{
+			background-color: $color-Main !important;				
+			color: white;
+		}
+	}
+	.left-arrow{
+		background-color: red;
+	}
+	.right-arrow{
+		
+	}
+}

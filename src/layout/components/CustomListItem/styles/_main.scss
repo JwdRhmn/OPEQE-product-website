@@ -1,0 +1,25 @@
+.custom-list-item-l1 {
+	text-align: $dir-left !important;
+	border-bottom: 0.1px solid $color-MediumLightGray !important;
+	&.no-border {
+		border-bottom: none !important;
+	}
+	.list-icon {
+		display: inline-flex;
+		min-width: 30px;
+	}
+	.list-action {
+		transition: opacity 0.4s;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		@include dir-right(10px);
+		&.hidden {
+			opacity: 0;
+		}
+	}
+	&.secondary-action {
+		position: relative;
+		@include dir-padding-right(50px);
+	}
+}

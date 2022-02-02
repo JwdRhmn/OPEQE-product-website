@@ -1,0 +1,28 @@
+.mobile-top-l1 {
+	height: $mobile-top-height;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	@include dir-right(0);
+	background-color: white;
+	z-index: $zi-max;
+	padding: 0 10px;
+	box-shadow: 1px 1px 10px -5px $color-DimGray;
+	&.border-bottom{
+		box-shadow: none;
+		border-bottom: 0.5px solid $color-MediumLightGray;
+	}
+	.start {
+		min-width: 70px;
+		width: 15%;
+		color: $color-Main;
+	}
+	.animation-container {
+		position: relative;
+		flex-grow: 1;
+		height: 100%;
+	}
+	@import "./animatedBody";
+	@import "./button";
+
+}

@@ -1,0 +1,108 @@
+.reserve-list-item-l2 {	
+	width: 100%;
+	border-bottom: 0.2px solid $color-MediumLightGray;
+	padding: 10px 0;
+	.body{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+		.day{
+			text-align: center;
+			background-color: $color-UltraLightGray;
+			padding: 8px;
+			display: inline-block;
+			width: 80px;
+			.month{
+				font-size: 16px;
+				color: $color-MediumGray;
+			}
+			.month-day{
+				font-size: 35px;
+				font-weight: bold;
+				color: $color-Main;
+			}
+			.week-day{
+				font-size: 16px;
+				color: $color-DarkGray;
+			}
+			@include media-breakpoint-up(sm){
+				padding: 20px;
+				.month-day{
+					font-size: 40px;
+				}
+			}
+		}
+		.details{
+			width: auto;
+			min-width: 160px;
+			display: inline-block;		
+			font-size: 14px;
+			.item{
+				padding: 2px 0;
+				.icon{
+					color: $color-Main;
+					vertical-align: middle;
+				}
+				.text{
+					@include dir-padding-left(4px);
+				}
+				.divider{
+					vertical-align: top;
+					display: inline-block;
+					height: 20px;
+					border-right: 1.5px solid $color-MediumGray;
+					margin: 0 4px;
+				}
+				.red{
+					color: $color-Red;
+				}
+			}
+			@include media-breakpoint-up(sm){
+				margin: 0 15px;
+			}
+		}
+		@include media-breakpoint-up(sm){
+			display: inline-flex;
+			justify-content: flex-start;
+			width: auto;
+			.details{
+				.item{
+					font-size: 16px;
+					padding: 4px 0;
+				}
+			}
+		}
+	}
+	.buttons{ 
+		width: 100%;
+		margin-top: 10px;
+		> *{
+			margin: 0 2px;
+		}
+		.button-container{
+			width: 120px;
+			display: inline-block;
+			> *{
+				padding: 6px 16px;				
+				width: 100%;
+				height: auto;
+				&.gray{
+
+				}
+				&.light{
+
+				}
+			}
+		}
+		@include media-breakpoint-up(sm){
+			display: inline-block;	
+			width: auto;		
+			margin-top: 0;
+			padding: 0 2px;
+			.button-container{
+				display: block;
+			}
+		}
+	}
+}

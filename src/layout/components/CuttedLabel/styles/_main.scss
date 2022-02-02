@@ -1,0 +1,29 @@
+.cutted-label-l1{
+	$cutterWidth: 20px;
+	display: inline-flex;
+	vertical-align: middle;
+	align-items: center;
+	background-color: $color-DarkOrange;
+	height: $cutterWidth;
+	padding: 0 5px;
+	border-radius: 5px;
+	.text{
+		color: white;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.cutter{
+		display: inline-block;
+		overflow: hidden;
+		width: $cutterWidth;
+		height: $cutterWidth;
+		background-color: white;		
+		border-radius: 5px;
+		&.start{
+			transform: translateX(dir-negate(-50%)) rotate(45deg);
+		}
+		&.end{
+			transform: translateX(dir-negate(50%)) rotate(45deg);
+		}
+	}
+}

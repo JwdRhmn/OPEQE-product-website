@@ -1,0 +1,5 @@
+.shopping-cart-page-l1{
+	&.mobile{
+		@include bottom-filler-padding(true);
+	}
+}

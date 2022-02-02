@@ -1,0 +1,16 @@
+@mixin bottom-filler-padding($hasBottomFixed: false){
+	$padding-bottom: $bottom-nav-height;
+	$standalone-padding-bottom: $bottom-nav-standalone-height;
+	@if($hasBottomFixed){
+		$padding-bottom: $padding-bottom 
+						+ $bottom-fixed-container-height 
+						+ 10px;
+		$standalone-padding-bottom: $standalone-padding-bottom 
+						+ $bottom-fixed-container-height 
+						+ 10px;
+	}
+	padding-bottom: $padding-bottom;
+	@media all and (display-mode: standalone) {
+		padding-bottom: $standalone-padding-bottom;
+	}
+}

@@ -1,0 +1,40 @@
+.banned-page-l1{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	padding: 10% 10%;
+	background-color: $color-Complementary;
+	@include media-breakpoint-up(sm){
+		.message{			
+			.title{
+				font-size: 30px;
+			}
+			.description{
+				font-size: 20px;
+			}
+			.phone{
+				font-size: 20px;
+			}
+		}
+		.logo{
+		}
+	}
+	.message{
+		width: 100%;
+		color: white;
+		.title{
+			font-size: 25px;
+		}
+		.description{
+			font-size: 18px;
+		}
+		.phone{
+			font-size: 18px;
+			color: lighten($color-Main, 30%);
+		}
+	}
+	.logo{
+		width: 100%;
+		text-align: center;
+	}
+}

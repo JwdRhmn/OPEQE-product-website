@@ -1,0 +1,25 @@
+.page-container-l1{		
+	position: relative;
+	width: 100%;	
+	> *{
+		$margin-top: $header-height + $page-top-gap;
+		margin-top: $margin-top;
+		height: calc(100% - #{$margin-top});
+		&.placeholder{
+			margin: 0 !important;
+			padding: 0 !important;
+			border: 0 !important;
+			height: 1px !important; 
+		}
+	}
+	&.mobile{
+		position: relative;
+		top: 0;
+		height: 100%;
+		> *{
+			$margin-top: $mobile-top-height;
+			margin-top: $margin-top;
+			height: calc(100% - #{$margin-top});
+		}
+	}	
+}

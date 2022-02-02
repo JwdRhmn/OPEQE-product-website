@@ -1,0 +1,16 @@
+.details-l2{
+	width: 100%;
+	&.mobile{
+		@include bottom-filler-padding(true);
+	}
+	.buttons{
+		width: 100%;
+		.add{
+			display: inline-block;
+			width: 90px;
+		}
+		> * {
+			margin: 0 4px;
+		}
+	}
+}

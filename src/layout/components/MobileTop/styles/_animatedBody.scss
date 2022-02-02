@@ -1,0 +1,46 @@
+.animated-body-l2{
+	$transition-duration: 500ms;
+
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+	top: 0;
+	@include dir-left(0);
+	@include forceGPU("transform, opacity");
+	&.swipe-before-enter{
+		display: none;
+	}
+	&.swipe-enter {	  
+    	transform: translateY(-50px);
+		&.swipe-enter-active {
+		    transform: translateY(0);
+		    transition: transform $transition-duration;		    
+		}
+	}
+
+	&.swipe-exit {    
+	    opacity: 1;
+		&.swipe-exit-active {
+		    opacity: 0;
+		    transition: opacity $transition-duration;		    
+		}
+	}
+	.middle{
+		text-align: center;
+		flex-grow: 1;
+		.main{
+			
+		}
+		.sub{
+			font-size: 14px;
+			color: $color-MediumGray;
+		}
+	}
+	.end{
+		min-width: 70px;
+		width: 15%;
+	}
+	.clickable{
+		cursor: pointer;
+	}
+}

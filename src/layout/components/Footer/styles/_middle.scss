@@ -1,0 +1,13 @@
+.middle-l2{	
+	.links{
+		text-align: center;
+		display: inline-flex;
+		flex-grow: 1;
+		width: unset;
+		.logo-container{
+			.text{
+				text-align: inherit;
+			}
+		}
+	}
+}

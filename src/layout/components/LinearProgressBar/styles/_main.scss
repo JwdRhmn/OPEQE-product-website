@@ -1,0 +1,14 @@
+.linear-progress-bar-l1{
+	position: relative;
+	.progress-label{
+		position: absolute;
+		top: 50%;
+		@include dir-left(10px);
+		transform: translateY(-50%);
+		color: white;
+	}
+	.progress-container{
+		overflow: hidden;
+		transform: translateZ(0);
+	}
+}

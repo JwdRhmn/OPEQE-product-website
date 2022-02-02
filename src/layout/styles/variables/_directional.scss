@@ -1,0 +1,16 @@
+
+
+$dir-right: right;
+@if($GLOBALS_RTL){
+	$dir-right: left;
+}
+
+$dir-left: left;
+@if($GLOBALS_RTL){
+	$dir-left: right;
+}
+
+$dir-rotate: 0;
+@if($GLOBALS_RTL){
+	$dir-rotate: 180deg;
+}

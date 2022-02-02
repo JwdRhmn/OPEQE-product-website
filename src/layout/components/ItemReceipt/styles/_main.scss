@@ -1,0 +1,11 @@
+.item-receipt-l1{
+	@import "./item";
+
+	.no-item{
+		width: 100%;
+		text-align: center;
+		color: $color-MediumGray;
+		border-bottom: 0.1px solid $color-MediumLightGray;
+		padding: 20px 0;
+	}
+}

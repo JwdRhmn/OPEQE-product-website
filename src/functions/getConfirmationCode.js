@@ -1,0 +1,1 @@
+export default uuid => uuid.split('-')[4].toUpperCase()

@@ -1,0 +1,13 @@
+.descriptions-l2{
+	margin-top: 20px;
+	.paragraph{
+		margin: 0;
+		ul{
+			margin: 0;
+			@include dir-padding-left(30px);
+			li{
+				margin: 10px 0;
+			}
+		}
+	}
+}

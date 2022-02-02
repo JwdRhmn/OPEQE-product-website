@@ -1,0 +1,18 @@
+.shopping-cart-l1{
+	@import "./header";
+	@import "./options";
+	@import "./map";
+	@import "./productOptions";
+	@import "./payment";
+	@import "./submit";
+	
+	width: 100%;
+	.full-icon{
+		text-align: center;
+		font-size: 120px;
+		color: $color-MediumGray;
+	}
+	ul{
+		padding: 0;
+	}
+}

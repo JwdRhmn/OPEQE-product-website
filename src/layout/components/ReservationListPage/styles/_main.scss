@@ -1,0 +1,33 @@
+.reservation-list-page-l1{
+	@import "./reserveList";
+	@import "./reserveListItem";	
+	
+	$top-gap: 40px - $page-top-gap;
+	
+	width: 100%;
+	margin-top: $header-height;
+	
+	.main-buttons {
+		.button-container{
+			margin: 0 2px;
+			@include media-breakpoint-up(sm){
+				margin: 0 10px;
+				width: 200px;
+			}
+		}
+	}	
+	
+	.promo{
+		position: absolute;
+	}
+	.body-container{
+		margin-top: $top-promotion-height + $top-gap ;
+	}
+	&.mobile{
+		.body-container{
+			margin-top: $top-gap;
+		}
+		@include bottom-filler-padding(true);
+	}
+
+}

@@ -1,0 +1,36 @@
+.item-l2{
+	width: 100%;
+	.body{
+		height: 200px;
+		background-color: $color-Main;
+		border-radius: 30px;
+		padding: 20px;
+		box-sizing: border-box;
+		width: 100%;
+		position: relative;
+		color: white;
+		.title{
+			font-weight: bold;
+		}
+		.sub-title{
+			font-size: 14px;
+		}
+		.amount{
+			font-size: 25px;
+			.super{
+				font-size: 18px;
+				margin: 0 2px;
+				vertical-align: super;
+			}
+			position: absolute;
+			bottom: 10px;
+			@include dir-right(10px);
+		}
+	}
+	.caption{
+		font-size: 14px;
+		box-sizing: border-box;
+		padding: 0 25px;
+		color: $color-DimGray;
+	}
+}

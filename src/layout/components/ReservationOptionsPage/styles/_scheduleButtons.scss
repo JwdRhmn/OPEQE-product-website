@@ -1,0 +1,26 @@
+.schedule-buttons-l2{
+	flex-wrap: nowrap;
+	> *{
+		vertical-align: middle;
+	}
+	.submit{		
+		display: inline-block;
+		width: 100%;
+	}
+	.number-select-container{
+		display: inline-flex;
+		align-items: center;
+	}
+	&.mobile{
+		.submit{
+			width: 100%;
+		}
+		.number-select-container{
+			width: 250px;
+			text-align: $dir-right;
+			.icon{
+				margin: 0 5px;
+			}
+		}
+	}
+}

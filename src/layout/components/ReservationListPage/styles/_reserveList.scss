@@ -1,0 +1,11 @@
+.reserve-list-l2 {
+	width: 100%;
+	.empty{
+		width: 100%;
+		text-align: center;
+		.icon {
+			color: $color-MediumGray;
+			font-size: 50px;
+		}
+	}
+}

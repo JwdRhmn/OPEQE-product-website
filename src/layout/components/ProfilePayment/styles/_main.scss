@@ -1,0 +1,16 @@
+.profile-payment-l1{
+	@import "./billingAddress";
+	@import "./cardDetails";
+	@import "./cardList";
+	width: 100%;
+	.main-header{
+		.placeholder{
+			width: 50px;
+		}
+	}
+	.submit{
+		button{
+			width: 280px;
+		}
+	}
+}

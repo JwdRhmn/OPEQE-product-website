@@ -1,0 +1,5 @@
+.card-list-l2{
+	&.mobile{
+		@include bottom-filler-padding(true);
+	}
+}

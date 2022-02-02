@@ -1,0 +1,45 @@
+.header-l1{
+	position: fixed;
+	top: 0;
+	z-index: $zi-max;
+	width: 100%;
+	@include dir-left(0);
+	text-align: center;	
+	transition: background-color 400ms;
+	.container{
+		height: $header-height;
+		.search-icon{
+			@include media-breakpoint-up(md){
+				display: none;
+			}
+		}
+		.cart{
+			font-size: 30px;
+			.badge{
+				top: 90%;
+				background-color: $color-Main;
+				color: white;
+			}
+		}
+		.profile{
+			font-size: 30px;
+			.badge{
+				top: 90%;
+				background-color: $color-Main;
+				color: white;
+			}
+		}
+		.back{
+			transition: opacity 600ms;
+			&.hide{
+				opacity: 0;
+			}
+		}
+	}
+	.full-search{
+		height: $header-height;
+	}
+	@import "./button";
+	@import "./link";
+	@import "./search";
+}

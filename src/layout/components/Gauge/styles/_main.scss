@@ -1,0 +1,15 @@
+.gauge-l1{
+	position: relative;
+	.svg{
+		overflow: visible;
+		transform: rotate(135deg) !important;
+	}
+	.label{
+		position: absolute;
+		bottom: 0;
+		@include dir-left(50%);
+		transform: translateX(dir-negate(-50%));
+		font-weight: bold;
+		color: $color-DimGray;	
+	}
+}

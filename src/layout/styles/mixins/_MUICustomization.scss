@@ -1,0 +1,17 @@
+@mixin MUI-custom-input($noUnderline: false){
+	&:after{
+		@if($noUnderline){
+			border-bottom: none !important;
+		} @else {
+			border-bottom-color: $color-Main !important;
+		}
+		
+	}
+	&:before{
+		@if($noUnderline){
+			border-bottom: none !important;
+		} @else {
+			border-bottom: 1px solid $color-Main !important;
+		}		
+	}		
+}

@@ -1,0 +1,23 @@
+.header-l2{
+	margin-bottom: 10px;
+	text-align: $dir-left;
+	.title{		
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.sub-title{		
+		.text{
+			font-size: 16px;
+			color: $color-MediumGray;
+			@include dir-padding-right(8px);
+		}
+		.more{
+			color: $color-Main;			
+			.icon{
+				font-size: 14px;
+				vertical-align: middle;
+				transform: rotate($dir-rotate);
+			}
+		}
+	}
+}

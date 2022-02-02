@@ -1,0 +1,17 @@
+.custom-list-item-l2{	
+	color: $color-DimGray;
+	padding: 15px 5px;
+	.text {		
+		@include dir-margin-left(10px);
+		.value{
+			color: $color-Complementary;
+		}
+		.label{
+			font-size: 12px;
+			color: $color-MediumGray;
+		}
+	}
+	.icon {
+		color: $color-Main;
+	}
+}

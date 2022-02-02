@@ -1,0 +1,56 @@
+.time-l2{	
+	$bgColor: $color-UltraLightGray;
+	$color: $color-Complementary;
+	$shadow: 0.5px 0.5px 5px -2px $color-MediumGray;	
+	display: inline-block;
+	padding: 5px;
+	min-width: 75px;
+	margin: 5px;
+	box-shadow: $shadow;
+	border: 0.1px solid $color-MediumGray;
+	border-radius: 20px;
+	text-align: $dir-left;
+	background-color: $bgColor;
+	color: $color;
+	span.time{
+		font-weight: bold;
+		padding: 0 10px;
+	}
+	span.meridiem{
+		float: $dir-right;
+		color: $color-Main;
+	}
+	&:focus{
+		background-color:$bgColor;
+		color: $color;
+		box-shadow: $shadow;
+	}
+	&:hover{
+		background-color:$bgColor;
+		color: $color;
+		box-shadow: $shadow;
+	}
+	&.selected{
+		$selectedColor: $color-UltraLightGray;
+		$selectedBGColor: $color-Main;
+		$selected-shadow: 0.5px 0.5px 8px 1px $color-Main;
+
+		background-color: $selectedBGColor;
+		color: $selectedColor;
+		box-shadow: $selected-shadow;
+
+		&:focus{
+			background-color:$selectedBGColor;
+			color: $selectedColor;
+			box-shadow: $selected-shadow;
+		}
+		&:hover{
+			background-color:$selectedBGColor;
+			color: $selectedColor;
+			box-shadow: $selected-shadow;
+		}
+		span.meridiem{
+			color: white;
+		}
+	}
+}

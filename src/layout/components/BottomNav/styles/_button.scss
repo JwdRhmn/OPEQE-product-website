@@ -1,0 +1,18 @@
+.button-l2{
+	display: inline-block;
+	text-align: center;
+	min-width: 50px;
+	width: 100%;
+	color: $color-MediumGray;
+	padding: 0;
+	border-radius: 0;
+	font-size: 30px;
+	.badge{
+		top: 0;
+		background-color: $color-Main;
+		color: white;
+	}
+	&.active{
+		color: $color-Main;
+	}
+}

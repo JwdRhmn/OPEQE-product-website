@@ -1,0 +1,16 @@
+.main-nav-l1{
+	.overlay{
+		width:100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		background-color: $color-MediumLightGray;
+		opacity: 0.6;
+		display: none;
+		z-index: $zi-max;
+		@include dir-left(0);
+		&.show{
+			display: block;
+		}
+	}
+}

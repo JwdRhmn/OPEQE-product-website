@@ -1,0 +1,73 @@
+.product-details-l1{
+	@import "./circularGraphs";
+	@import "./descriptions";
+	@import "./header";
+	@import "./ingredients";
+	@import "./options";
+	@import "./pricing";
+	@import "./rating";
+	@import "./similarItems";
+	@import "./rateDetails";
+	@import "./orderMethod";
+
+	$small-breakpoint: md;
+	.main{
+		flex-wrap: wrap !important;
+		
+
+		@include media-breakpoint-up($small-breakpoint){
+			flex-wrap: nowrap !important;
+		}
+
+		.gallery{
+			box-sizing: border-box;
+			margin-top: 20px;
+			position: static;
+			width: 100%;
+			padding: 0;
+			@include media-breakpoint-up($small-breakpoint){			
+				position: sticky;
+				margin-top: 0;
+				top: $header-height + 10px;			
+				width: 40%;
+				@include dir-padding-right(20px);
+			}
+		}
+		.info{
+			flex-grow: 1;
+			box-sizing: border-box;
+			padding: 0 10px;		
+			width: 100%;
+			.header{
+				border-bottom: none;
+			}
+			.circular-graphs{
+				margin-top: 20px;
+			}
+			@include media-breakpoint-up($small-breakpoint){		
+				width: 40%;	
+				.header{
+					border-bottom: 0.2px solid $color-MediumLightGray;
+				}
+			}
+		}
+		.order-method{
+			box-sizing: border-box;
+			padding: 0 10px;
+			width: 100%;
+			@include media-breakpoint-up($small-breakpoint){	
+				position: sticky;
+				top: $header-height + 10px;
+				width: 20%;		
+				min-width: 220px;
+			}
+			&.inner{
+				padding: 0;
+				min-height: 470px;
+			}
+		}
+	}
+	.bottom{
+		margin-top: 50px;
+	}
+}

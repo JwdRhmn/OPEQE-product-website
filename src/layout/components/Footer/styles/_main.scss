@@ -1,0 +1,17 @@
+.footer-l1{
+	$secondary-color: lighten($color-Main, 20%);
+	$padding-top: 20px;
+
+	position: relative;
+	background-color: $color-Complementary;
+	z-index: $zi-medium;
+	padding: 0 0 50px 0;
+	color: $color-MediumGray;
+	
+	@import "./link";
+	@import "./linkGroup";
+	@import "./top";
+	@import "./middle";
+	@import "./bottom";
+	@import "./image";
+}

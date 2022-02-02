@@ -1,0 +1,1 @@
+export const contactOPEQE = "(877)466-7373";

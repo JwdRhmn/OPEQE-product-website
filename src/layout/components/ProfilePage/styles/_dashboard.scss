@@ -1,0 +1,7 @@
+.dashboard-l2{
+	margin-top: 30px;
+	width: 100%;
+	&.mobile{
+		@include bottom-filler-padding();
+	}
+}

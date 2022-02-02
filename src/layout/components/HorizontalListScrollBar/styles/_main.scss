@@ -1,0 +1,25 @@
+.horizontal-list-scroll-bar-l1{
+	$cursorWidth: 30px;
+	@include dir-padding-right($cursorWidth);
+	height: 1px;
+	background-color: $color-MediumLightGray;
+	.bar{		
+		position: relative;		
+		.cursor{
+			transition: $dir-left 0.5s cubic-bezier(.74, 0, .35, .96);
+			position: absolute;
+			@include dir-left(0);
+			width: $cursorWidth;
+			height: 2px;
+			background-color: $color-Complementary;
+			opacity: 0.9;
+		}
+	}
+	&.scroll{
+		.bar{		
+			.cursor{
+				transition: none;
+			}
+		}
+	}
+}

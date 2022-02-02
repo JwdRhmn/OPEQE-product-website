@@ -1,0 +1,19 @@
+.filtered-items-page-l1{
+	.page-body{
+		position: relative;		
+		background-color: white;
+		margin-top: $top-promotion-height - $page-top-gap;
+		.page-content{
+			@import "./foodCard";
+		}
+	}
+	&.mobile{
+		.page-body{
+			margin-top: $page-top-gap;
+		}
+		@include bottom-filler-padding();
+	}
+	.plcaholder{
+		height: 0;
+	}
+}

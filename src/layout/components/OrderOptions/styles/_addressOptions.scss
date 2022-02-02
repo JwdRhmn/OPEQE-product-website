@@ -1,0 +1,9 @@
+.address-options-l2{
+	text-align: center;	
+	&.mobile{
+		@include bottom-filler-padding(true);
+	}
+	.delivery{	
+		margin-top: 10px;	
+	}	
+}

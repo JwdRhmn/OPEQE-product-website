@@ -1,0 +1,24 @@
+.delivery-options-l2{
+	text-align: center;
+	&.mobile{
+		@include bottom-filler-padding(true);
+	}	
+	.locations{
+        padding: 0;
+	}
+	.current-location{
+        padding: 0;
+	}
+	.how{
+		text-align: $dir-left;
+		.radio-group{
+			@include dir-padding-left(16px);
+			.radio{
+				color: $color-Main;
+				&:hover{
+					background-color: rgba($color-Main, 0.08);
+				}
+			}
+		}
+	}
+}

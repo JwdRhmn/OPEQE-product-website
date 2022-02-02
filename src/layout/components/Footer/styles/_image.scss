@@ -1,0 +1,19 @@
+.image-l2{
+	background-color: white;
+	margin-bottom: 50px;
+	width: 100%;
+	text-align: center;	
+	height: 60px;
+	.image-container{		
+		display: inline-flex;
+		position: relative;
+		height: 100%;
+		svg{
+			position: absolute;
+			bottom: -31px;
+			width: 100%;
+			height: 100%; 
+			vertical-align: middle;
+		}
+	}
+}

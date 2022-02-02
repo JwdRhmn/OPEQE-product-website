@@ -1,0 +1,123 @@
+.default-button-l1{		
+	@function useAnimationName($type, $name) {
+		@return #{$type}-waiting-#{$name};
+	}
+	@mixin defineAnimations($loadingWidth, $name) {
+		@keyframes start-waiting-#{$name}{
+			0%{
+				width: 100%;
+				
+			}
+			50%{
+				width: 0;
+			}
+			80%{
+				width: $loadingWidth + $loadingWidth/3;
+			}
+			100%{
+				width: $loadingWidth;
+			}
+		}
+		@keyframes stop-waiting-#{$name}{
+			0%{
+				width: $loadingWidth;
+			}
+			100%{
+				width: 100%;
+			}
+		}
+	}
+
+	$largeHeight: 50px;
+	$smallHeight: 30px;
+
+
+	text-align: center;
+	display: inline-block;
+	> * {
+		text-transform: none !important;
+		border-width: 1px !important;
+		border-style: solid !important;
+		box-shadow: none !important;
+		width: 100%;			
+					
+		.proggress{
+			color: inherit;			
+			svg{
+			    width: inherit;
+			    height: inherit;
+			    margin: 0;
+			}
+		}		
+		&:focus{
+			box-shadow: none;
+		}
+		&:hover{
+			box-shadow: none !important;
+		}
+		&.start-waiting{			
+			animation-duration: 0.3s; 
+			animation-timing-function: cubic-bezier(.53, .72, .81, .31); 
+			animation-delay: 0s;
+			animation-direction: normal;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-play-state: running; 
+		}
+		&.stop-waiting{						
+			animation-duration: 0.2s; 
+			animation-timing-function: cubic-bezier(.53, .72, .81, .31); 
+			animation-delay: 0s;
+			animation-direction: normal;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-play-state: running; 
+		}
+	}
+	&.large{
+		> * {
+			font-size: 18px;
+			height: $largeHeight !important;
+			padding: 0 12px !important;
+			.proggress{
+				width: $largeHeight - 10px !important;
+				height: $largeHeight - 10px !important;
+			}
+			&.start-waiting{
+				animation-name: useAnimationName('start', 'large');
+			}
+			&.stop-waiting{
+				animation-name: useAnimationName('stop', 'large');
+			}
+		}
+	}
+	&.small{
+		> * {
+			height: $smallHeight !important;
+			padding: 0 10px !important;
+			.proggress{
+				width: $smallHeight - 5px !important;
+				height: $smallHeight - 5px !important;
+			}
+			&.start-waiting{
+				animation-name: useAnimationName('start', 'small');
+			}
+			&.stop-waiting{
+				animation-name: useAnimationName('stop', 'small');
+			}
+		}
+	}
+	&.color-green{
+		> *{	
+			color: $color-Main;			
+		}
+	}
+	&.color-gray{
+		> *{	
+			color: $color-DimGray;			
+		}
+	}
+	
+	@include defineAnimations($largeHeight, "large");
+	@include defineAnimations($smallHeight, "small");
+}

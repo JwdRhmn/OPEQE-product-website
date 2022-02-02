@@ -1,0 +1,71 @@
+.carousel-gallery-l1{
+	flex-wrap: nowrap !important;
+	.image-container{
+		width: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		.scroller{
+			width: 100%;
+			transition: transform 500ms;
+			@include forceGPU("transform");
+			.image{
+				@include dir-margin-right(1%);
+				width: 100%;
+				height: 100%;
+				display: inline-block;
+				vertical-align: top;
+				img{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+	.indicator{
+		-webkit-overflow-scrolling: touch;
+		height: 100%;
+		padding: 5px;
+		text-align: center;
+		.item{	
+			padding: 2px;
+			border: 1px solid $color-MediumGray;		
+			margin-bottom: 5px;
+			cursor: pointer;
+			width: 50px;
+			height: 50px;
+			&:hover{
+				box-shadow: 0 0 4px 2px $color-MediumGray;
+			}
+			&.selected{
+				border-color: $color-Secondary;
+				box-shadow: 0 0 4px 2px $color-Secondary;
+			}
+			&.is-button{
+				border: none;
+				width: auto;
+				height: auto;
+				box-shadow: none;
+			}
+			&.no-border{
+				border: none;
+			}
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&.horizontal{
+		flex-direction: column-reverse;
+		.indicator{
+			white-space: nowrap;
+			overflow: auto;
+			height: auto;
+			.item{
+				display: inline-block;
+			}
+		}
+	}
+}

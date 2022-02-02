@@ -1,0 +1,22 @@
+.options-l2{
+	margin-top: 20px;
+	.option-set{
+		margin-top: 10px;
+		.title{
+			.label{
+				font-size: 14px;
+				color: $color-MediumGray;
+			}
+			.value{
+				font-size: 14px;
+				font-weight: bold;
+			}
+		}
+		.options{			
+			.option-container{
+				display: inline-block;				
+				@include dir-margin(4px, 4px, 4px, 0);				
+			}
+		}
+	}
+}

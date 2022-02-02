@@ -1,0 +1,12 @@
+.button-l2{
+	white-space: normal;
+	font-size: 14px;
+	height: auto !important;
+	border-radius: 0;
+	padding: 2px 4px !important;
+	&.active{
+		background-color: $color-Main !important;
+		color: white !important;
+		transition: background-color 500ms;
+	}
+}

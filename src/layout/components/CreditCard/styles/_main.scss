@@ -1,0 +1,37 @@
+.credit-card-l1{
+	.card-icon{
+		min-width: unset;
+		img{
+			width: 50px;
+			height: 30px;
+		}
+	}
+	.content{
+		padding: 0 15px;
+		width: 100%;
+		overflow: hidden;
+		.text{
+			display: block;
+			text-align: $dir-left;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			&.primary{
+				font-size: 16px;
+			}
+			&.secondary{
+				font-size: 14px;
+				color: $color-MediumGray;
+			}
+		}
+	}
+	.icon{
+		vertical-align: middle;
+	}
+	.green{
+		color: $color-Main;
+	}
+	.gray{
+		color: $color-MediumGray;
+	}
+}

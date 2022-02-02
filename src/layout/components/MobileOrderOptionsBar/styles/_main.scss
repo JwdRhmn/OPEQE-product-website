@@ -1,0 +1,18 @@
+.mobile-order-options-bar-l1{
+	position: sticky;
+	top: $mobile-top-height;
+	z-index: $zi-medium;	
+	background-color: white;
+	text-align: center;
+	padding: 5px 0;
+	box-shadow: 1px 0 10px -5px $color-MediumGray;
+	display: block;
+	width: 100%;
+	.main{
+		
+	}
+	.sub{
+		font-size: 14px;
+		color: $color-MediumGray;
+	}
+}

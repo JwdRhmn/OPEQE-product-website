@@ -1,0 +1,37 @@
+.bottom-l2{
+	padding: 30px 0 0 0;
+	border-top: 0.5px solid $color-UltraDarkGray;
+	width: 100%;
+	justify-content: center;
+	@include media-breakpoint-up(sm){
+		justify-content: space-between;
+	}
+	.description{
+		margin: 20px 0 30px 0;
+		font-size: 16px;
+		.title{
+			color: $color-MediumLightGray;
+			margin-bottom: 10px;
+		}
+		.text{
+			color: $color-MediumGray;
+			text-align: justify;
+		}
+	}
+	.others{
+		.links{
+			.copy-right{
+				@include dir-padding-right(10px);
+			}		
+		}	
+		.social{
+			> * {
+				transition: color 500ms;
+				color: white;
+				&:hover{
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+}

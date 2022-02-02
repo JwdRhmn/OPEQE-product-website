@@ -1,0 +1,3 @@
+@mixin forceGPU($willChange){
+	will-change: #{$willChange};
+}

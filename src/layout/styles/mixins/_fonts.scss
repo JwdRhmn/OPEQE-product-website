@@ -1,0 +1,9 @@
+@mixin importFont($families, $lang){
+  @each $key, $value in $families{
+		@font-face {
+	      font-family:'#{$value}';
+	      src:url('../assets/fonts/#{$lang}/#{$value}.woff') format('woff'); 
+    }
+  }
+}
+

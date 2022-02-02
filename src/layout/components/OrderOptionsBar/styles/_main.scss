@@ -1,0 +1,68 @@
+.order-options-bar-l1 {
+	@import "./typeSelect";
+
+	padding: 10px 0;		
+	position: sticky;
+	top: $header-height;	
+	background-color: white;
+	z-index: $zi-medium;	
+	box-shadow: 1px 0 10px -5px $color-MediumGray;
+	height: 70px;
+	.container{
+		height: 100%;
+		.options{
+			width: 180px;
+			text-align: center;
+			color: $color-MediumGray;
+			.mode {
+				color: $color-Secondary;
+				text-align: center;			
+			}
+			.sub{
+				width: 100%;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			.no-address{
+				margin-top: 5px;
+				display: inline-block;
+				padding: 2px 10px;
+				border-radius: 10px;
+				background-color: $color-Secondary;
+				color: white;
+			}
+		}
+		.divider{
+			display: inline-block;
+			height: 30px;
+			width: 2px;
+			margin: 0  10px;
+			background-color: $color-MediumLightGray;
+		}
+		.change{
+			margin: 0 20px;
+			background-color: $color-Complementary;
+			padding: 6px 15px;		
+			width: auto;
+			height: auto;
+		}
+		.address-container{
+			display: none;
+			@include media-breakpoint-up(md){
+				display: inline-block;
+			}
+			.address{
+				display: inline-block;
+				@include dir-margin-left(15px);
+				.line2{
+					font-size: 14px;
+					color: $color-MediumGray;
+				}
+			}
+		}
+		.catering{
+			color: $color-DimGray;
+		}
+	}
+}

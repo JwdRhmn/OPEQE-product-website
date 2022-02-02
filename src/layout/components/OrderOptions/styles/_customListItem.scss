@@ -1,0 +1,20 @@
+.custom-list-item-l2{	
+	.icon{
+		color: $color-Complementary;
+		&.gray{
+			color: $color-MediumGray;
+		}
+		&.green{
+			color: $color-Main;
+		}
+	}
+	.body{
+		.secondary{
+			color: $color-DimGray;
+		}
+		.teritary{
+			color: $color-Main;
+			font-size: 14px;
+		}
+	}
+}

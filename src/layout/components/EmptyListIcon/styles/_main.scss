@@ -1,0 +1,11 @@
+.empty-list-icon-l1{
+	font-size: 120px;
+	color: $color-MediumGray;
+	height: 250px;
+	&.mobile{
+		height: 100%;
+		position: fixed;
+	    top: 0;
+		@include dir-left(0);
+	}
+}

@@ -1,0 +1,17 @@
+.link-l2{
+	color: $color-MediumGray;	
+	display: block;
+	text-align: center;
+	padding: 4px 0;
+	transition: color 600ms;
+	@include media-breakpoint-up(sm){
+		text-align: $dir-left;
+	}
+	&.inline{
+		padding: 0 10px;
+		display: inline-block;
+	}
+	&:hover{
+		color: $secondary-color;
+	}
+}

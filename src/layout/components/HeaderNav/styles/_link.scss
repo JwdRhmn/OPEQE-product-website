@@ -1,0 +1,20 @@
+.link-l2{
+	margin: 0 10px;
+	color: $color-DimGray;
+	padding: 2px 0;
+	display: none;
+	transition: border-color 0.4s;
+	border-bottom: 1px solid transparent;
+	@include media-breakpoint-up(sm){
+		display: inline-block;
+	}
+	&:hover{
+		border-color: $color-DimGray;
+	}
+	&.active{
+		border-bottom: 1px solid $color-DimGray;
+	}
+	&.fixed{
+		display: inline-block;
+	}
+}

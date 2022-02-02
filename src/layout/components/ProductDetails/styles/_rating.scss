@@ -1,0 +1,22 @@
+.rating-l2{
+	> *{
+		vertical-align: middle;
+	}
+	.stars{		
+		position: relative;
+		cursor: pointer;
+		display: inline-flex;
+		.drop-down-icon{
+			cursor: pointer;
+			color: $color-MediumGray;
+			.icon{
+				vertical-align: middle;
+			}
+		}
+	}	
+	.count{
+		@include dir-margin-left(20px);
+		font-size: 14px;
+		color: $color-MediumGray;
+	}	
+}

@@ -1,0 +1,21 @@
+.reservation-options-page-l1{
+	@import "./details";
+	@import "./customListItem";
+	@import "./scheduleButtons";
+	$top-gap: 40px - $page-top-gap;
+		
+	width: 100%;
+	margin-top: $header-height;
+	
+	.promo{
+		position: absolute;
+	}
+	.part-container{
+		margin-top: $top-promotion-height + $top-gap ;
+	}
+	&.mobile{
+		.part-container{
+			margin-top: $top-gap;
+		}
+	}
+}

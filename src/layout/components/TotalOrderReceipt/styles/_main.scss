@@ -1,0 +1,22 @@
+.total-order-receipt-l1{
+	padding-top: 15px;
+	.receipt-details{			
+		.item{
+			font-size: 14px;
+			padding-top: 2px;
+			padding-bottom: 2px;
+		}
+		.total{
+			font-weight: bold;
+			.price{
+				font-size: 14px;
+				padding: 2px 5px;
+				background-color: $color-Complementary;
+				color: $color-UltraLightGray;
+			}
+		}
+	}
+	.green{
+		color: $color-Main;
+	}
+}

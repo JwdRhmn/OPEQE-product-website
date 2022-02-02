@@ -1,0 +1,31 @@
+.billing-address-l2{
+	text-align: center;
+	min-height: 400px;
+	&.mobile{
+		@include bottom-filler-padding(true);
+	}
+	.form-container{
+		display: inline-flex;
+		.auto-complete{
+			width: 100%;
+		}
+		.apt{
+			display: inline-block;
+			width: 48%;
+			@include dir-margin-right(2%);
+		}
+		.postal-code{
+			display: inline-block;
+			width: 48%;
+			@include dir-margin-left(2%);
+		}
+	}
+	.full-loading{
+		height: 400px;
+	}
+	.submit{
+		.button{
+			width: 200px;
+		}
+	}
+}

@@ -1,0 +1,6 @@
+.phone-input-l1{
+	width: 100%;
+	> div {
+		@include MUI-custom-input();
+	}
+}

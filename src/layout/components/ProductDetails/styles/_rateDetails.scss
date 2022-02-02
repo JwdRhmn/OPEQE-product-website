@@ -1,0 +1,98 @@
+.rate-details-l2{
+	z-index: $zi-medium;
+	.details{
+		$pointerSize: 10px;
+		$borderRadius: 5px;
+		$border: 0.5px solid $color-MediumLightGray;
+		$shadow: 0 0 5px -1px $color-MediumGray;
+		cursor: default;
+		width: 300px;
+		position: absolute;
+		top: 100%;
+		@include dir-left(50%);
+		transform: translate(dir-negate(-50%), $pointerSize);
+		border: $border;
+		box-shadow: $shadow;
+		border-radius: $borderRadius;			
+		&.fade-enter{
+			transition: opacity 600ms;
+			opacity: 0;
+		}
+		&.fade-enter-active{
+			opacity: 1;
+		}
+		&.fade-enter-done{
+			opacity: 1;
+		}
+		&.fade-exit{
+			transition: opacity 400ms;
+			opacity: 0;
+		}
+		&.fade-exit-done{
+			opacity: 0;
+		}
+		.body{
+			background-color: white;
+			border-radius: $borderRadius;				
+			z-index: $zi-medium;
+			padding: 5px;
+			.exact{
+				> *{
+					vertical-align: middle;
+				}
+				.value{
+					@include dir-margin-left(10px);
+				}
+			}
+			.raters{
+				margin-top: 10px;
+				color: $color-MediumGray;
+			}
+			.rate-lines{
+				margin-top: 15px;
+				.rate-line{
+					flex-wrap: nowrap;
+					margin: 4px 0;
+					&.max{
+						.label{
+							font-weight: bold;
+							color: $color-Complementary;
+						}
+					}
+					.label{
+						color: $color-DimGray;
+						font-size: 14px;
+					}
+					.progress{
+						width: 60%;
+					}
+					.percentage{
+						color: $color-DimGray;
+						font-size: 14px;
+						width: 25px;
+					}
+				}
+			}
+		}
+		.pointer{
+			position: absolute;
+			width: $pointerSize;
+			height: $pointerSize;
+			top: 0;
+			@include dir-left(50%);
+			border: $border;
+			box-shadow: $shadow;
+			transform: translate(dir-negate(-50%), -50%) rotate(45deg);
+			background-color: white;
+			z-index: $zi-underlay;
+		}
+		.palceholder{
+			position: absolute;
+			top: 0;
+			height: $pointerSize + 5px;
+			width: 100%;
+			opacity: 0;
+			transform: translateY(-100%);
+		}
+	}
+}

@@ -1,0 +1,8 @@
+.profile-promo-l1{
+	@import "./item";
+	width: 100%;
+	padding: 0 20px;
+	&.mobile{
+		@include bottom-filler-padding();
+	}
+}

@@ -1,0 +1,89 @@
+.animated-switch-l1{
+	$transition-duration: 600ms;
+
+	position: relative;
+	min-height: 100%;
+	width: 100%;
+	.route-section{
+		position: absolute;
+		width: 100%;
+		min-height: 100%;
+		top: 0;
+		left: 0;		
+		&.swipe-enter{
+			.fade-by-page-transition{
+				display: none;
+			}
+		}	
+		&.swipe-exit{
+			.fade-by-page-transition{
+				display: none;
+			}
+		}		
+	}
+	&.opacity{
+		.route-section{
+			&.swipe-enter {	    	
+		    	opacity: 0;
+				&.swipe-enter-active {
+				    opacity: 1;
+				    transition: opacity  $transition-duration,
+				    			transform  $transition-duration;			   	
+				}
+			}
+
+			&.swipe-exit {    
+			    opacity: 1;
+				&.swipe-exit-active {
+				    opacity: 0;
+				    transition: opacity  $transition-duration,
+				    			transform  $transition-duration;
+				}
+			}
+		}
+	}
+
+	&.transform{
+		.route-section{
+			&.swipe-enter {	
+		    	transform: translateX(100%);
+				&.swipe-enter-active {
+					transform: translateX(0);
+					transition: opacity  $transition-duration,
+				    			transform  $transition-duration;
+				}
+			}
+
+			&.swipe-exit {		    
+			    transform: translateX(0);
+				&.swipe-exit-active {;
+					transform: translateX(-100%);;
+					transition: opacity  $transition-duration,
+				    			transform  $transition-duration;
+				}
+			}
+		}
+		&.back{
+			.route-section{
+				&.swipe-enter {	
+			    	transform: translateX(-100%);
+					&.swipe-enter-active {
+						transform: translateX(0);
+						transition: opacity  $transition-duration,
+				    			transform  $transition-duration;
+					}
+				}
+
+				&.swipe-exit {		    
+				    transform: translateX(0);
+					&.swipe-exit-active {;
+						transform: translateX(100%);;
+						transition: opacity  $transition-duration,
+				    			transform  $transition-duration;
+					}
+				}
+			}
+		}
+	}
+
+}

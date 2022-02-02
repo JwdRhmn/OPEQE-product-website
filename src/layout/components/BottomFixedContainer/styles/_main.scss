@@ -1,0 +1,35 @@
+.bottom-fixed-button-l1{
+	text-align: center;
+	width: 100%;
+	height: $bottom-fixed-container-height;
+	box-sizing: border-box;
+	bottom: 0;
+	padding: 2px 0 10px 0;
+	z-index: $zi-medium;
+	@include dir-left(0);
+	.bottom-fixed-content{
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		padding: 0 25px;
+		> *{
+			margin: 0 5px;
+		}
+	}
+	&.desktop{
+		margin-top: 100px;
+		.bottom-fixed-content{
+			max-width: 100%;
+		}
+	}
+	&.mobile{
+		box-shadow: 0 -5px 10px 10px white;	
+		background-color: white;
+		position: fixed;
+		bottom: $bottom-nav-height;
+		@media all and (display-mode: standalone) {
+			bottom: $bottom-nav-standalone-height;
+		}
+	}
+	
+}

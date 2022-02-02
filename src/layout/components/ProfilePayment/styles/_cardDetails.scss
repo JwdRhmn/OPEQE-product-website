@@ -1,0 +1,21 @@
+.card-details-l2{	
+	text-align: center;
+	.number{
+		margin-top: 20px;
+		width: 240px;
+		display: inline-block;
+	}
+	.date{
+		margin: 0 10px;
+		width: 130px;
+		display: inline-block;
+	}
+	.cvv{
+		margin: 0 10px;
+		width: 90px;
+		display: inline-block;
+	}
+	&.mobile{
+		@include bottom-filler-padding(true);
+	}
+}

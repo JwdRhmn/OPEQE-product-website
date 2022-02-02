@@ -1,0 +1,19 @@
+.extra-order-promotion-l1{
+	width: 100%;
+	padding: 30px 0;
+	text-align: center;
+	.title{
+		font-size: 25px;		
+	}
+	.sub-title{
+		font-size: 18px;
+		color: $color-MediumGray;
+		margin-top: 10px;
+	}
+	.order-options-bar{
+		display: inline-block;
+		box-shadow: none;
+		width: auto;
+		height: 80px;
+	}
+}

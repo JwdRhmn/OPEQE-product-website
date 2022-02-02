@@ -1,0 +1,22 @@
+.order-receipt-page-l1 {
+	width: 100%;
+	padding-top: 20px;
+	&.mobile{
+		@include bottom-filler-padding();
+	}
+	.header {
+		text-align: center;
+		.title {
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.date {
+			font-size: 14px;
+			color: $color-DimGray;
+		}
+		.id {
+			font-size: 14px;
+			color: $color-MediumGray;
+		}
+	}
+}

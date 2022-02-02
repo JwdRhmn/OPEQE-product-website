@@ -1,0 +1,22 @@
+.auto-complete-input-l1{ 
+	position: relative;
+	.input{
+		width: 100%;
+		margin: 0;
+		> div{
+			@include MUI-custom-input();
+		}
+		.adornmrnt{
+			> *{
+				width: 25px !important;
+				height: 25px !important;
+			}
+		}
+	}
+	.list-container{
+		position: absolute;
+		width: 100%;
+		z-index: $zi-medium;
+		white-space: normal;
+	}
+}

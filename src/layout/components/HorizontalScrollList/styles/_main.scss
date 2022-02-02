@@ -1,0 +1,166 @@
+.horizontal-scroll-list-l1{
+	$itemMargin: 0;
+	display: inline-block;
+	width: 100%;
+	position: relative;	
+	> .list-container{
+		overflow: hidden;
+		@include dir-padding-right(50px);
+		&.scroll{
+			overflow-x: scroll;
+			-webkit-overflow-scrolling: touch;
+		}
+		> .list-scroller{
+			white-space: nowrap;
+			flex-wrap: nowrap;
+			padding: 0 0 10px 0;
+			transition: transform 0.5s cubic-bezier(.74, 0, .35, .96);
+			> *{	
+				display: inline-block;
+				white-space: normal;
+				text-align: center;
+				vertical-align: top;					
+			}
+			@function getWidth($num){
+				@return ((100% - ($num - 1) * $itemMargin) / $num);
+			}
+			@for $i from 1 through 6 {
+				&.take-#{$i}{
+					> *{								
+						$xs: 1;
+						$sm: 1;
+						$md: 1;
+
+						@if $i == 5 or $i == 6 {
+							$xs: 2;
+							$sm: 4;
+							$md: 5;
+						}
+						@if $i == 4 {
+							$xs: 1;
+							$sm: 2;
+							$md: 3;
+						}
+						@if $i == 3 {
+							$xs: 1;
+							$sm: 2;
+							$md: 3;
+						}
+						@if $i == 2 {
+							$xs: 1;
+							$sm: 2;
+							$md: 2;
+						}
+						width: getWidth($xs);
+						min-width: getWidth($xs);
+						@include media-breakpoint-up(sm){
+							width: getWidth($sm);
+							min-width: getWidth($sm);
+						}
+						@include media-breakpoint-up(md){
+							width: getWidth($md);
+							min-width: getWidth($md);
+						}
+						@include media-breakpoint-up(lg){
+							width: getWidth($i);
+							min-width: getWidth($i);
+						}
+					}
+				}
+			}
+		}
+	}
+	> .control-container{	
+		$width: 65px;
+
+		position: absolute;
+		top: 0;
+		display: flex;
+		height: 100%;
+		width: $width;
+		align-items: center;
+
+
+		&.next{
+			@include dir-right(-$width);
+			
+			.icon{
+				transform: rotate($dir-rotate);
+			}
+			.control{
+				position: absolute;
+				@include dir-left(-50%);
+			}
+		}
+		&.prev{
+			@include dir-left(-$width);
+
+			.icon{
+				transform: rotate($dir-rotate + 180deg);
+			}
+			.control{
+				position: absolute;
+				@include dir-right(-50%);
+			}
+		}
+		
+
+		.control{
+			background-color: $color-Main !important;
+			color: white;
+			padding: 8px;					
+			display: inline-block;
+
+			animation-name: bounce-in;
+			animation-duration: 0.4s; 
+			animation-timing-function: cubic-bezier(.53, .72, .81, .31); 
+			animation-delay: 0s;
+			animation-direction: normal;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-play-state: running;
+		}
+	}	
+
+	&:hover{
+		.show{
+			animation-name: bounce-out;
+			animation-duration: 0.8s; 
+			animation-timing-function: linear; 
+			animation-delay: 0s;
+			animation-direction: normal;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-play-state: running;	
+		}		
+	}
+
+	@keyframes bounce-in{
+		0%{
+			transform: scale(1);
+		}
+		70%{
+			transform: scale(1.3);
+		}
+		100%{
+			transform: scale(0);
+		}
+	}
+	@keyframes bounce-out{
+		0%{
+			transform: scale(0);
+		}
+		30%{
+			transform: scale(1.5);
+		}
+		50%{
+			transform: scale(1);
+		}
+		70%{
+			transform: scale(1.1);
+		}
+		100%{
+			transform: scale(1);
+		}
+	}
+}

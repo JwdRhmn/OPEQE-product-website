@@ -1,0 +1,20 @@
+.default-text-field-l1{
+	.input-container{
+		width: 100%;
+		@include MUI-custom-input();
+		.adornment{
+			color: $color-DimGray;
+			img{
+				width: 24px	;
+			}
+		}
+	}
+	.helper{
+		transition: opacity 0.5s;
+		opacity: 0;
+		color: $color-Main;
+		&.show{
+			opacity: 1;
+		}
+	}
+}

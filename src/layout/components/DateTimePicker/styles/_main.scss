@@ -1,0 +1,30 @@
+.date-time-picker-l1{
+	flex-wrap: nowrap !important;
+	justify-content: space-between;
+	&.mobile{
+		.date-container{
+			.date-picker{
+				@include bottom-filler-padding(true);
+			}
+		}
+	}
+	.date-container{
+		.date-title{
+			text-align: $dir-left;
+			@include dir-margin(0, 0, 15px, 15px);
+		}
+	}
+	.time-container{	
+		display: inline-block;
+		width: 100%;
+		.time-title{
+			text-align: $dir-left;
+			@include dir-margin(0, 0, 15px, 5px);
+		}
+		.time-picker{
+			max-height: 230px;
+			margin-bottom: 48px;
+			text-align: $dir-left;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.profile-invite-l1{
+	text-align: center;
+	width: 100%;
+	.text{
+		padding: 10px 6px;
+		display: inline-block;
+		font-size: 14px;
+		color: $color-MediumGray;
+		text-align: justify;
+	}
+	.code{
+		border-radius: 50px;
+		color: $color-DimGray;
+		border: 1px solid $color-MediumGray;
+		font-size: 35px;
+		padding: 5px 10px;
+	}
+	.share{
+		.button{
+			padding: 0;
+			border-radius: 30px;
+			font-size: 50px;
+			color: white;
+			margin: 0 2px;			
+			&.more{
+				padding: 7px;
+				background-color: $color-DimGray;
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.sign-up-email-l1{
+	.input{
+		width: 100%;
+		> div{
+			@include MUI-custom-input();	
+		}
+	}
+	.note{
+		transition: all 1s;
+		font-size: 16px;
+		color: $color-Main;
+		opacity:0;
+	}
+	.title{
+		font-size:20px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		text-align: $dir-left;
+	}
+	.sub-title{
+		transition: all 1s;
+		opacity: 0;
+		font-size:16px;
+		margin-bottom: 10px;
+		color: $color-MediumGray;
+		text-align: $dir-left;
+	}
+	.button-container{
+		width: 100%;
+	}
+}
